@@ -17,7 +17,7 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
     Button button;
     Spinner spinner;
     String cat;
-    static int f1=0,f2=0;
+    int f1=0,f2=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
