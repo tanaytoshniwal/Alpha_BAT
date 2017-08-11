@@ -26,7 +26,8 @@
         <activity android:name=".UserActivity" />
         <activity android:name=".ServiceProviderActivity" />
         <activity android:name=".UpdateActivity" />
-        <activity android:name=".SignupActivity"></activity>
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".TrustedContactActivity"></activity>
     </application>
 
 </manifest>
