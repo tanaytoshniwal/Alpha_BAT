@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "135942971720",
+    "firebase_url": "https://guardians-29aee.firebaseio.com",
+    "project_id": "guardians-29aee",
+    "storage_bucket": "guardians-29aee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135942971720:android:f547292581d75f24",
+        "android_client_info": {
+          "package_name": "com.alphabat.guardians"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "135942971720-g9n9a2h6ejs95abgfs238q8p73l49545.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALLR8YQ5v-124l4lVJJXGJdIChFhpTQes"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
