@@ -27,7 +27,10 @@
         <activity android:name=".ServiceProviderActivity" />
         <activity android:name=".UpdateActivity" />
         <activity android:name=".SignupActivity" />
-        <activity android:name=".TrustedContactActivity"></activity>
+        <activity android:name=".TrustedContactActivity" />
+        <activity android:name=".MedicalService" />
+        <activity android:name=".PoliceService" />
+        <activity android:name=".FireService"></activity>
     </application>
 
 </manifest>
