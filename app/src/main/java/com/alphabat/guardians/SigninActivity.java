@@ -1,5 +1,6 @@
 package com.alphabat.guardians;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +12,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class SigninActivity extends AppCompatActivity implements View.OnClickListener,View.OnFocusChangeListener{
     EditText username,password;
@@ -33,6 +44,7 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 cat=spinner.getSelectedItem().toString();
+                cat=cat.toLowerCase();
             }
 
             @Override
@@ -55,10 +67,62 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view)
     {
-        String id,pass;
+        final String id,pass;
         id=username.getText().toString();
         pass=password.getText().toString();
-        if(id.equals("user")&&pass.equals("user"))
+        if (id.equals("")) {
+            username.setError("can't be blank");
+        } else if (pass.equals("")) {
+            password.setError("can't be blank");
+        } else {
+            String url = "https://alphabat-master1.firebaseio.com/alphabat-master1.json";
+            final ProgressDialog pd = new ProgressDialog(SigninActivity.this);
+            pd.setMessage("Loading...");
+            pd.show();
+            StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String s) {
+                    if (s.equals("null")) {
+                        Toast.makeText(SigninActivity.this, "user not found", Toast.LENGTH_LONG).show();
+                    } else {
+                        try
+                        {
+                            JSONObject obj = new JSONObject(s);
+                            if(!obj.has(id))
+                            {
+                                Toast.makeText(SigninActivity.this, "user not found", Toast.LENGTH_LONG).show();
+                            }
+                            else if(!obj.getJSONObject(id).getString("category").equals(cat))
+                            {
+                                Toast.makeText(SigninActivity.this, "Wrong Category!", Toast.LENGTH_LONG).show();
+                            }
+                            else if(obj.getJSONObject(id).getString("password").equals(pass))
+                            {
+                                UserDetails.username = id;
+                                UserDetails.password = pass;
+                                if(cat.equals("user"))
+                                    startActivity(new Intent(SigninActivity.this, UserActivity.class));
+                                else
+                                    startActivity(new Intent(SigninActivity.this, ServiceProviderActivity.class));
+                            }
+                            else
+                                Toast.makeText(SigninActivity.this, "incorrect password", Toast.LENGTH_LONG).show();
+                        }catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    pd.dismiss();
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError volleyError) {
+                    System.out.println("" + volleyError);
+                    pd.dismiss();
+                }
+            });RequestQueue rQueue = Volley.newRequestQueue(SigninActivity.this);
+            rQueue.add(request);
+        }
+        /*if(id.equals("user")&&pass.equals("user"))
         {
             if(cat.equals("User"))
             {
@@ -78,7 +142,7 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
         else
         {
             Toast.makeText(this, "Wrong Credentials!", Toast.LENGTH_SHORT).show();
-        }
+        }*/
     }
 
     @Override

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.alphabat.guardians.SignupActivity">
+    tools:context="com.alphabat.guardians.SignupActivity"
+    android:background="#d64848">
 
     <TabHost
         android:layout_width="fill_parent"
@@ -46,11 +47,11 @@
                         android:id="@+id/textView10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="54dp"
+                        android:layout_marginTop="58dp"
                         android:text="Name"
-                        android:layout_marginStart="28dp"
+                        android:textSize="20sp"
                         android:layout_alignParentTop="true"
-                        android:layout_alignParentStart="true" />
+                        android:layout_alignStart="@+id/textView11" />
 
                     <TextView
                         android:id="@+id/textView11"
@@ -58,59 +59,59 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="30dp"
                         android:text="Email ID"
+                        android:textSize="20sp"
                         android:layout_below="@+id/username"
-                        android:layout_alignStart="@+id/textView10" />
+                        android:layout_alignStart="@+id/textView12" />
 
                     <EditText
                         android:id="@+id/username"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginEnd="31dp"
-                        android:layout_marginTop="42dp"
                         android:ems="10"
                         android:inputType="textPersonName"
-                        android:text="Name" />
+                        android:layout_alignBaseline="@+id/textView10"
+                        android:layout_alignBottom="@+id/textView10"
+                        android:layout_alignStart="@+id/userpassc" />
 
                     <EditText
                         android:id="@+id/usermail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignStart="@+id/username"
-                        android:layout_below="@+id/username"
-                        android:layout_marginTop="17dp"
                         android:ems="10"
-                        android:inputType="textEmailAddress" />
+                        android:inputType="textEmailAddress"
+                        android:layout_alignBaseline="@+id/textView11"
+                        android:layout_alignBottom="@+id/textView11"
+                        android:layout_alignStart="@+id/userpass" />
 
                     <TextView
                         android:id="@+id/textView12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Password"
+                        android:textSize="20sp"
+                        android:layout_marginTop="31dp"
                         android:layout_below="@+id/usermail"
-                        android:layout_alignStart="@+id/textView11"
-                        android:layout_marginTop="27dp" />
+                        android:layout_alignStart="@+id/textView13" />
 
                     <TextView
                         android:id="@+id/textView13"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Confirm Password"
-                        android:layout_alignBaseline="@+id/userpassc"
-                        android:layout_alignBottom="@+id/userpassc"
-                        android:layout_alignStart="@+id/textView12" />
+                        android:text="Confirm\nPassword"
+                        android:textSize="20sp"
+                        android:layout_marginEnd="14dp"
+                        android:layout_alignTop="@+id/userpassc"
+                        android:layout_toStartOf="@+id/userpass" />
 
                     <EditText
                         android:id="@+id/userpass"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignEnd="@+id/usermail"
-                        android:layout_below="@+id/usermail"
-                        android:layout_marginTop="16dp"
                         android:ems="10"
                         android:inputType="textPassword"
-                        android:layout_toEndOf="@+id/textView13" />
+                        android:layout_alignBaseline="@+id/textView12"
+                        android:layout_alignBottom="@+id/textView12"
+                        android:layout_alignStart="@+id/userbutton" />
 
                     <EditText
                         android:id="@+id/userpassc"
@@ -118,9 +119,9 @@
                         android:layout_height="wrap_content"
                         android:ems="10"
                         android:inputType="textPassword"
-                        android:layout_centerVertical="true"
-                        android:layout_alignStart="@+id/userpass"
-                        android:layout_alignEnd="@+id/userpass" />
+                        android:layout_below="@+id/userpass"
+                        android:layout_toEndOf="@+id/textView13"
+                        android:layout_marginTop="19dp" />
 
                     <Button
                         android:id="@+id/userbutton"
@@ -144,6 +145,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="54dp"
                         android:text="Name"
+                        android:textSize="20sp"
                         android:layout_marginStart="28dp"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentStart="true" />
@@ -154,6 +156,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="30dp"
                         android:text="Email ID"
+                        android:textSize="20sp"
                         android:layout_below="@+id/spname"
                         android:layout_alignStart="@+id/tV10" />
 
@@ -184,6 +187,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Password"
+                        android:textSize="20sp"
                         android:layout_below="@+id/spmail"
                         android:layout_alignStart="@+id/tV11"
                         android:layout_marginTop="27dp" />
@@ -192,7 +196,8 @@
                         android:id="@+id/tV13"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Confirm Password"
+                        android:textSize="20sp"
+                        android:text="Confirm\nPassword"
                         android:layout_alignBaseline="@+id/sppassc"
                         android:layout_alignBottom="@+id/sppassc"
                         android:layout_alignStart="@+id/tV12" />

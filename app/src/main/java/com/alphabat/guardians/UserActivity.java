@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -14,6 +15,7 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
     Button btn1,btn2;
     RadioButton rb1,rb2,rb3;
     RadioGroup rg;
+    TextView name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +28,8 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
         rb1=(RadioButton)findViewById(R.id.rb1);
         rb2=(RadioButton)findViewById(R.id.rb2);
         rb3=(RadioButton)findViewById(R.id.rb3);
+        name=(TextView)findViewById(R.id.name);
+        name.setText("Hi,"+UserDetails.username);
     }
     @Override
     public void onClick(View view)

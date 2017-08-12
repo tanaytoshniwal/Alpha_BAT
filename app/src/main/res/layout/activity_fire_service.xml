@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.alphabat.guardians.FireService">
+    tools:context="com.alphabat.guardians.FireService"
+    android:background="#d64848">
     <Button
         android:id="@+id/btn"
         android:layout_width="352dp"
