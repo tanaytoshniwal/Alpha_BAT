@@ -30,7 +30,8 @@
         <activity android:name=".TrustedContactActivity" />
         <activity android:name=".MedicalService" />
         <activity android:name=".PoliceService" />
-        <activity android:name=".FireService"></activity>
+        <activity android:name=".FireService" />
+        <activity android:name=".ContactUs"></activity>
     </application>
 
 </manifest>

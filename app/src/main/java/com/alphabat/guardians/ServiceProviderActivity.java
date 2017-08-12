@@ -9,13 +9,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Switch;
-import android.widget.TextView;
 
 public class ServiceProviderActivity extends AppCompatActivity implements View.OnClickListener{
     Button button;
     Switch s;
     CheckBox rb1,rb2,rb3;
-    TextView name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +23,6 @@ public class ServiceProviderActivity extends AppCompatActivity implements View.O
         rb1=(CheckBox)findViewById(R.id.rb1);
         rb2=(CheckBox)findViewById(R.id.rb2);
         rb3=(CheckBox)findViewById(R.id.rb3);
-        name.setText("Hi,"+UserDetails.username);
         button.setOnClickListener(ServiceProviderActivity.this);
     }
     @Override

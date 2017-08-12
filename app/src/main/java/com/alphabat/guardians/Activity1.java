@@ -32,7 +32,6 @@ public class Activity1 extends AppCompatActivity implements View.OnClickListener
             {
                 Intent myIntent=new Intent(Activity1.this,SignupActivity.class);
                 Activity1.this.startActivity(myIntent);
-                finish();
                 break;
             }
         }

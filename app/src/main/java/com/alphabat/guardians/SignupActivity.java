@@ -1,11 +1,8 @@
 package com.alphabat.guardians;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -46,14 +43,14 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
         userbutton.setOnClickListener(SignupActivity.this);
         host=(TabHost)findViewById(R.id.th);host.setup();
         spname.setText("");
-        TabHost.TabSpec spec=host.newTabSpec("Tab one");
+        TabHost.TabSpec spec=host.newTabSpec("User");
         spec.setContent(R.id.User);
-        spec.setIndicator("Tab one");
+        spec.setIndicator("User");
         host.addTab(spec);
         Firebase.setAndroidContext(this);
-        spec=host.newTabSpec("Tab two");
+        spec=host.newTabSpec("Service Provider");
         spec.setContent(R.id.Service_Provider);
-        spec.setIndicator("Tab two");
+        spec.setIndicator("Service Provider");
         host.addTab(spec);
     }
     @Override
@@ -93,7 +90,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
                                 if(s.equals("null")) {
                                     reference.child(spname1).child("password").setValue(sppass1);
                                     reference.child(spname1).child("mail").setValue(spmail1);
-                                    reference.child(spname1).child("category").setValue("sp");
+                                    reference.child(spname1).child("category").setValue("service provider");
                                     Toast.makeText(SignupActivity.this, "registration successful", Toast.LENGTH_LONG).show();
                                 }
                                 else {

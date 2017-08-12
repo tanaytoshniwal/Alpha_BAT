@@ -100,10 +100,10 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
                             {
                                 UserDetails.username = id;
                                 UserDetails.password = pass;
-                                if(cat.equals("user"))
-                                    startActivity(new Intent(SigninActivity.this, UserActivity.class));
-                                else
+                                if(obj.getJSONObject(id).getString("category").equals("service provider"))
                                     startActivity(new Intent(SigninActivity.this, ServiceProviderActivity.class));
+                                else
+                                    startActivity(new Intent(SigninActivity.this, UserActivity.class));
                             }
                             else
                                 Toast.makeText(SigninActivity.this, "incorrect password", Toast.LENGTH_LONG).show();

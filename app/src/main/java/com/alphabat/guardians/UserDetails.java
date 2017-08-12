@@ -7,5 +7,5 @@ package com.alphabat.guardians;
 public class UserDetails {
     static String username="";
     static String password="";
-
+    int count;
 }
