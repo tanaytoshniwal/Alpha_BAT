@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "373190333521",
+    "firebase_url": "https://alphabat-master1.firebaseio.com",
+    "project_id": "alphabat-master1",
+    "storage_bucket": "alphabat-master1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:373190333521:android:f547292581d75f24",
+        "android_client_info": {
+          "package_name": "com.alphabat.guardians"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "373190333521-norj541i57smlmg45s7eqatb3eahdbev.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alphabat.guardians",
+            "certificate_hash": "d6325ab73f53aa9fe8a10d8d387dbd98b26cb3b5"
+          }
+        },
+        {
+          "client_id": "373190333521-23gp09742ucfigsee9j4op9vngi4ocg7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmdXOM0vLHs09zLItLEmfXBVwxoQcshv4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "373190333521-23gp09742ucfigsee9j4op9vngi4ocg7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
