@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.SEND_SMS"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -27,11 +28,11 @@
         <activity android:name=".ServiceProviderActivity" />
         <activity android:name=".UpdateActivity" />
         <activity android:name=".SignupActivity" />
-        <activity android:name=".TrustedContactActivity" />
         <activity android:name=".MedicalService" />
         <activity android:name=".PoliceService" />
         <activity android:name=".FireService" />
-        <activity android:name=".ContactUs"></activity>
+        <activity android:name=".ContactUs" />
+        <activity android:name=".ContactActivity"></activity>
     </application>
 
 </manifest>

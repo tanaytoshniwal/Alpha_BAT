@@ -38,7 +38,7 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
         {
             case R.id.btn1:
             {
-                Intent myIntent=new Intent(UserActivity.this,TrustedContactActivity.class);
+                Intent myIntent=new Intent(UserActivity.this,ContactActivity.class);
                 UserActivity.this.startActivity(myIntent);
 
                 break;
